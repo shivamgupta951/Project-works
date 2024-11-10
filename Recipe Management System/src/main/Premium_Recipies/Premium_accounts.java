@@ -1,6 +1,7 @@
 package Premium_Recipies;
 import java.sql.*;
 public class Premium_accounts {
+    /* Class to update the status of normal accounts into premium account. */
     private static String url = "jdbc:mysql://127.0.0.1:3306/Recipe_manager_system";
     private static String username = "root";
     private static String password = "mysql@2004";    

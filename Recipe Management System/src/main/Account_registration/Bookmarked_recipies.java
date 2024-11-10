@@ -1,11 +1,11 @@
 package Account_registration;
 import java.sql.*;
-import java.util.*;
 public class Bookmarked_recipies {
+    /*Classs is created to store the bookmarked recipies with user id and recipes id */
     private static String url = "jdbc:mysql://127.0.0.1:3306/Recipe_manager_system";
     private static String username = "root";
     private static String password = "mysql@2004"; 
-    public static void Bookmark(String acc_id , String recipe_id )
+    public static void Bookmark(String acc_id , String recipe_id , String name)
     {
         try
         {
@@ -26,11 +26,12 @@ public class Bookmarked_recipies {
                 type=type+"PVR";
             }
             Connection connection = DriverManager.getConnection(url, username, password);
-            String query = "insert into bookmarked_recipies_data(Acc_id,Recipes_id,Recipe_type) values (?,?,?)";
+            String query = "insert into bookmarked_recipies_data(Acc_id,Recipes_id,Recipe_type,Recipe_name) values (?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1,acc_id);
             preparedStatement.setString(2,recipe_id);
             preparedStatement.setString(3,type);
+            preparedStatement.setString(4, name);
             int lines = preparedStatement.executeUpdate();
             if (lines>0) {
                 System.out.println("Data Updated Succesfully!");

@@ -1,11 +1,9 @@
 package Account_registration;
-import Account_registration.Account_generation;
 import java.sql.*;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.util.*;
 import java.util.Date;
 public class User_info {
+    /*Class is created to store the user info that are inputed by the user. */
     public static String get_username(String email)
     {
         int len = email.length();
@@ -66,10 +64,6 @@ public class User_info {
             if (lines>0) {
                 flag=true;
               }
-            else
-            {
-                flag=flag;
-            }
             acc_id=Account_generation.create_accountidd(phone_number);
             String query2 = "insert into user_information(Acc_id) values (?)";
             PreparedStatement preparedStatement2 = connection.prepareStatement(query2);

@@ -1,7 +1,8 @@
 package Task_manager;
 import java.util.*;
-import java.sql.*;;
+import java.sql.*;
 public class Recipies_id_generator {
+    /* Class to generate the recipes idd for Normal version as well as premium version. */
     private static String url = "jdbc:mysql://127.0.0.1:3306/Recipe_manager_system";
     private static String username = "root";
     private static String password = "mysql@2004";   
