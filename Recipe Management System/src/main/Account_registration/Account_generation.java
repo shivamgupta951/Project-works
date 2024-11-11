@@ -21,7 +21,7 @@ public class Account_generation {
         }
         try
         {
-            int ph_number=0;
+            int ph_number=phoneno;
             LocalDate date = LocalDate.now();
             String formattedString = date.toString();
             Date utilDate = new SimpleDateFormat("yyyy-MM-dd").parse(formattedString);
@@ -132,7 +132,6 @@ public class Account_generation {
                 }
                 if (ques1==false) {
                     System.out.println();
-                    System.out.println("PROGRAM EXECUTED..");
                     value=value+user;
                     created=true;
                     if (user.charAt(0)=='E' && user.charAt(1)=='X' && user.charAt(2)=='T')
@@ -144,10 +143,7 @@ public class Account_generation {
                         preparedStatement.setDate(4, sqlDate);
                         preparedStatement.setString(5, "Normal Version");
                         preparedStatement.setInt(6,ph_number);
-                        int lines = preparedStatement.executeUpdate();
-                        if (lines>0) {
-                            System.out.println("A new Account is created in EXT with user Acc_id - "+user+" ~!");
-                        } 
+                        preparedStatement.executeUpdate();
                     }
                     else if (user.charAt(0)=='Y' && user.charAt(1)=='I' && user.charAt(2)=='N')
                     {
@@ -158,10 +154,7 @@ public class Account_generation {
                         preparedStatement.setDate(4, sqlDate);
                         preparedStatement.setString(5, "Normal Version");
                         preparedStatement.setInt(6,ph_number);
-                        int lines = preparedStatement.executeUpdate();
-                        if (lines>0) {
-                            System.out.println("A new Account is created in YIN with user Acc_id - "+user+" ~!");
-                        } 
+                        preparedStatement.executeUpdate();
                     }
                     else if (user.charAt(0)=='S' && user.charAt(1)=='B' && user.charAt(2)=='T')
                     {
@@ -172,10 +165,7 @@ public class Account_generation {
                         preparedStatement.setDate(4, sqlDate);
                         preparedStatement.setString(5, "Normal Version");
                         preparedStatement.setInt(6,ph_number);
-                        int lines = preparedStatement.executeUpdate();
-                        if (lines>0) {
-                            System.out.println("A new Account is created in SBT with user Acc_id - "+user+" ~!");
-                        } 
+                        preparedStatement.executeUpdate();
                     }
                     else if (user.charAt(0)=='T' && user.charAt(1)=='R' && user.charAt(2)=='S')
                     {
@@ -186,10 +176,7 @@ public class Account_generation {
                         preparedStatement.setDate(4, sqlDate);
                         preparedStatement.setString(5, "Normal Version");
                         preparedStatement.setInt(6,ph_number);
-                        int lines = preparedStatement.executeUpdate();
-                        if (lines>0) {
-                            System.out.println("A new Account is created in TRS with user Acc_id - "+user+" ~!");
-                        } 
+                        preparedStatement.executeUpdate();
                     }
                     else if (user.charAt(0)=='P' && user.charAt(1)=='N' && user.charAt(2)=='T')
                     {
@@ -200,10 +187,7 @@ public class Account_generation {
                         preparedStatement.setDate(4, sqlDate);
                         preparedStatement.setString(5, "Normal Version");
                         preparedStatement.setInt(6,ph_number);
-                        int lines = preparedStatement.executeUpdate();
-                        if (lines>0) {
-                            System.out.println("A new Account is created in PNT with user Acc_id - "+user+" ~!");
-                        } 
+                        preparedStatement.executeUpdate();
                     }
                 }
                 else

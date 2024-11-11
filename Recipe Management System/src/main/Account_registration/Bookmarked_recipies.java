@@ -5,7 +5,7 @@ public class Bookmarked_recipies {
     private static String url = "jdbc:mysql://127.0.0.1:3306/Recipe_manager_system";
     private static String username = "root";
     private static String password = "mysql@2004"; 
-    public static void Bookmark(String acc_id , String recipe_id , String name)
+    public static void Bookmark(String acc_id , String recipe_id , String name) throws Exception
     {
         try
         {

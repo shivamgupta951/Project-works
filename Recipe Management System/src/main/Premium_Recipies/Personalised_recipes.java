@@ -6,7 +6,7 @@ public class Personalised_recipes {
     private static String url = "jdbc:mysql://127.0.0.1:3306/Recipe_manager_system";
     private static String username = "root";
     private static String password = "mysql@2004"; 
-    public static void Personalised_recipes_storage(String acc_ids , String recipe_namess , String recipe_ingrediants , String recipe_process,  String original_recipe_id)
+    public static void Personalised_recipes_storage(String acc_ids , String recipe_namess , String recipe_ingrediants , String recipe_process,  String original_recipe_id) throws Exception
     {
         try
         {

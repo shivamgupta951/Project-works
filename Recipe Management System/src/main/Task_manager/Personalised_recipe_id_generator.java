@@ -6,7 +6,7 @@ public class Personalised_recipe_id_generator {
     private static String url = "jdbc:mysql://127.0.0.1:3306/Recipe_manager_system";
     private static String username = "root";
     private static String password = "mysql@2004"; 
-    public static String Personalised_recipe_id_gen(String acc_id) 
+    public static String Personalised_recipe_id_gen(String acc_id) throws Exception
     {
         String personalised_id = "PSR";
         try

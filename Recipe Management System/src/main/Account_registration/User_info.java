@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 public class User_info {
     /*Class is created to store the user info that are inputed by the user. */
-    public static String get_username(String email)
+    public static String get_username(String email) throws Exception
     {
         int len = email.length();
         int point=0;
@@ -23,7 +23,6 @@ public class User_info {
     private static String password = "mysql@2004";    
     public static void user_registration(String email,String dob,String name,int phone_number,String rms_password,String profession,String state) throws Exception
     {
-        int account_counts=0;
         String premium_status="NO"; 
         String acc_id; 
         String usernames=get_username(email);
@@ -40,14 +39,7 @@ public class User_info {
         try
         {
             Connection connection = DriverManager.getConnection(url, username, password);
-            Statement statement = connection.createStatement();
-            String query3 = String.format("Select Total_Accounts_Count from user_information where Username = %s", "Account-setup"); 
-            ResultSet resultSet = statement.executeQuery(query3);
-            while (resultSet.next()!=false) {
-                account_counts = resultSet.getInt("Total_AccountS_Count");
-            }
-            account_counts=account_counts+1;
-            String query = "insert into user_information(Email,Dob,Username,Name,Phone_number,RMS_password,Profession,State,Premium_status,Total_Accounts_Count) values (?,?,?,?,?,?,?,?,?,?)";
+            String query = "insert into user_information(Email,Dob,Username,Name,Phone_number,RMS_password,Profession,State,Premium_status) values (?,?,?,?,?,?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             boolean flag=false;
             preparedStatement.setString(1, email);
@@ -59,16 +51,16 @@ public class User_info {
             preparedStatement.setString(7, profession);
             preparedStatement.setString(8, state);
             preparedStatement.setString(9, premium_status);
-            preparedStatement.setInt(10, account_counts);
             int lines=preparedStatement.executeUpdate();
             if (lines>0) {
                 flag=true;
               }
             acc_id=Account_generation.create_accountidd(phone_number);
-            String query2 = "insert into user_information(Acc_id) values (?)";
+            String query2 = "update user_information set Acc_id = (?) where Phone_number = (?)";
             PreparedStatement preparedStatement2 = connection.prepareStatement(query2);
             boolean flag2=false;
             preparedStatement2.setString(1, acc_id);
+            preparedStatement2.setInt(2, phone_number);
             int lines2=preparedStatement2.executeUpdate();
             if (lines2>0) {
                 flag2=true;
@@ -80,8 +72,7 @@ public class User_info {
             if (flag==true && flag2==true) {
                 System.out.println("");
                 System.out.println("");
-                System.out.println("Account Succesfully registered with username: "+usernames+" and RMS Account id: "+acc_id+" ~!");
-                System.out.println("Total Account counts => "+account_counts);
+                System.out.println("Account Succesfully registered with Phone Number: "+phone_number+" and RMS Account id: "+acc_id+" ~!");
             }
             connection.close();
         }

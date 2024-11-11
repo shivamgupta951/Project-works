@@ -5,7 +5,7 @@ public class Premium_accounts {
     private static String url = "jdbc:mysql://127.0.0.1:3306/Recipe_manager_system";
     private static String username = "root";
     private static String password = "mysql@2004";    
-    public static void update_to_premium(String Acc_id , int Phone_number)
+    public static void update_to_premium(String Acc_id , int Phone_number) throws Exception
     {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");

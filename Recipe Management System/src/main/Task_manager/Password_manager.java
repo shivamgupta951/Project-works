@@ -1,5 +1,4 @@
 package Task_manager;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -10,7 +9,7 @@ public class Password_manager {
     private static String url = "jdbc:mysql://127.0.0.1:3306/Recipe_manager_system";
     private static String username = "root";
     private static String password = "mysql@2004"; 
-    public static void password_storage(String rms_password , String email , String acc_id, String acc_type , int phone_number) 
+    public static void password_storage(String rms_password , String email , String acc_id, String acc_type , int phone_number) throws Exception
     {
         try
         {

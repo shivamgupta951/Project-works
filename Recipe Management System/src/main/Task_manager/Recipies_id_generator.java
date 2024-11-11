@@ -6,14 +6,14 @@ public class Recipies_id_generator {
     private static String url = "jdbc:mysql://127.0.0.1:3306/Recipe_manager_system";
     private static String username = "root";
     private static String password = "mysql@2004";   
-    public static int number_gen()
+    public static int number_gen() throws Exception
     {
         int num;
         Random rand = new Random();
         num = rand.nextInt(1000000,10000000);
         return num;
     }
-    public static String generate_id(String type)
+    public static String generate_id(String type) throws Exception
     {
         String id ="";
         try{
