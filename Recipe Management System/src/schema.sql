@@ -8,12 +8,11 @@ Name varchar(30) default "Not Set",
 Phone_number int primary key default 0,
 RMS_password varchar(50) default "Not Set",
 Profession varchar(30) default "Not Set",
-State varchar(60) default "Not Set",
+State varchar(60) default "Not Set",	
 Premium_status varchar(10) default "Not Set",
 Acc_id varchar(20),
 Total_Accounts_Count int default 1000000
 );
-select * from user_information;
 create table if not exists EXT(
 counts int default 0,
 Acc_id varchar(20) primary key,
