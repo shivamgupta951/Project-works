@@ -1,0 +1,212 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dark Theme */
+/* Background with Image */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('img2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Container with Glassmorphism Effect */
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Adjust transparency */
+    backdrop-filter: blur(10px); /* Creates glassmorphism effect */
+    -webkit-backdrop-filter: blur(10px); /* Support for Safari */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    max-height: 80vh;                                       
+    margin-bottom: 40px;
+    overflow-y: auto; 
+    animation: scaleUp 1s ease-out;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for glass look */
+}
+
+/* Custom Scrollbar */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1f1f1f;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* Title Animation */
+.title {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffa500;
+    animation: fadeInTitle 2s ease-out;
+}
+
+@keyframes fadeInTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: rgba(50, 50, 50, 0.8);
+    border-radius: 8px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #777;
+    border-radius: 8px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #ffa500;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #222;
+    color: #f0f0f0;
+    outline: none;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+input:focus, select:focus {
+    border-color: #ffa500;
+    transform: scale(1.02);
+}
+
+/* Submit Button */
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #ffa500, #ff4500);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.6);
+}
+
+/* Small Text */
+small {
+    color: #ccc;
+    font-size: 12px;
+}
+
+/* Error Messages */
+.error {
+    color: #ff6347;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #aaa;
+}
+
+.footer a {
+    color: #ffa500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ff4500;
+}
+
+/* Hover Effects */
+input[type="text"]:hover, 
+input[type="email"]:hover, 
+input[type="password"]:hover, 
+input[type="tel"]:hover, 
+select:hover {
+    border-color: #ff4500;
+    transform: scale(1.02);
+}
+
+/* Keyframes for Aesthetic Animations */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #ffa500;
+    }
+    50% {
+        box-shadow: 0 0 15px #ffa500;
+    }
+    100% {
+        box-shadow: 0 0 5px #ffa500;
+    }
+}
+
+input[type="submit"]:focus {
+    animation: glow 1.5s infinite;
+}

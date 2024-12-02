@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Info</title>
+    <link rel="stylesheet" href="dark.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <h1 class="title">
+        Recipe Info <i class="fa fa-utensils"></i>
+    </h1>
+    <div class="container">
+        <!-- Image Section -->
+        <div class="image">
+            <img src="img1.jpg" alt="Chocolate Cake" />
+        </div>
+
+        <!-- Recipe Details Section -->
+        <div class="recipe-card">
+            <h2 class="recipe-name">Chocolate Cake</h2>
+            <div class="info">
+                <h3><i class="fa fa-list"></i> Ingredients:</h3>
+                <ul id="ingredients-list">
+                    <li>2 cups of flour</li>
+                    <li>1 cup of sugar</li>
+                    <li>1/2 cup of cocoa powder</li>
+                    <li>1 tsp of baking powder</li>
+                    <li>1/2 tsp of salt</li>
+                    <li>1 cup of milk</li>
+                    <li>1/2 cup of vegetable oil</li>
+                    <li>2 eggs</li>
+                </ul>
+            </div>
+            <div class="info">
+                <h3><i class="fa fa-info-circle"></i> Recipe Process:</h3>
+                <p>Gather all ingredients. Preheat the oven to 350°F (175°C). Grease and flour two 9-inch round baking pans. Stir sugar, flour, cocoa, baking powder, and salt together in a large bowl. Add eggs, milk, oil, and vanilla; mix for 2 minutes on medium speed with an electric mixer. Stir in boiling water. The batter will be thin. Pour evenly into the prepared pans. Bake until a toothpick inserted in the center comes out clean, about 30–35 minutes. Cool and enjoy!</p>
+            </div>
+            <div class="info">
+                <h3><i class="fa fa-star"></i> Ratings:</h3>
+                <div class="ratings">
+                    <span id="rating-value">4.5/5</span>
+                    <span class="stars">⭐⭐⭐⭐☆</span>
+                </div>
+            </div>
+            <div class="bookmark">
+                <button id="bookmark-btn" onclick="toggleBookmark()">
+                    <i class="fa fa-bookmark"></i> Bookmark Recipe
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="ViewRecipe.js"></script>
+</body>
+</html>

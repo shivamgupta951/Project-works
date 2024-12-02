@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Registration Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="registration.css"> <!-- Link to an external stylesheet -->
+</head>
+<body>
+    <div class="title">Recipe Manager System</div>
+
+    <div class="container">
+        <h2>Create an Account</h2>
+        <form id="registrationForm" action="#" method="POST">
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                <div id="nameError" class="error"></div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                <div id="emailError" class="error"></div>
+            </div>
+            
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <small>Password must be at least 6 characters long</small>
+                <div id="passwordError" class="error"></div>
+            </div>
+
+            <!-- Phone Number Field -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                <div id="phoneError" class="error"></div>
+            </div>
+
+            <!-- Date of Birth Field -->
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+                <div id="dobError" class="error"></div>
+            </div>
+
+            <!-- Profession Field -->
+            <div class="form-group">
+                <label for="profession">Profession</label>
+                <input type="text" id="profession" name="profession" placeholder="Enter your profession" required>
+                <div id="professionError" class="error"></div>
+            </div>
+
+            <!-- State Field -->
+            <div class="form-group">
+                <label for="state">State</label>
+                <select id="state" name="state" required>
+                    <option value="">Select your state</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh </option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                    <option value="Andaman & Nicobar">Andaman & Nicobar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Dadra & Nagar Haveli ">Dadra & Nagar Haveli </option>
+                    <option value="Daman & Diu">Daman & Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+                    <option value="Ladakh">Ladakh</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Puducherry">Puducherry</option>
+                </select>
+                <div id="stateError" class="error"></div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+
+        <div class="footer">
+            <p>Already have an account? <a href="#">Login here</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent form submission to validate fields
+
+            let valid = true;
+
+            // Clear all previous error messages
+            clearErrors();
+
+            // Validate Name
+            const name = document.getElementById("name").value.trim();
+            if (name === "") {
+                displayError("nameError", "Name is required.");
+                valid = false;
+            }
+
+            // Validate Email
+            const email = document.getElementById("email").value.trim();
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailRegex.test(email)) {
+                displayError("emailError", "Please enter a valid email address.");
+                valid = false;
+            }
+
+            // Validate Password
+            const password = document.getElementById("password").value.trim();
+            if (password.length < 6) {
+                displayError("passwordError", "Password must be at least 6 characters.");
+                valid = false;
+            }
+
+            // Validate Phone Number
+            const phone = document.getElementById("phone").value.trim();
+            const phoneRegex = /^\d{10}$/;
+            if (!phoneRegex.test(phone)) {
+                displayError("phoneError", "Phone number must be 10 digits.");
+                valid = false;
+            }
+
+            // Validate Date of Birth (Age must be at least 18)
+            const dob = document.getElementById("dob").value;
+            const birthDate = new Date(dob);
+            const age = new Date().getFullYear() - birthDate.getFullYear();
+            if (age < 18) {
+                displayError("dobError", "You must be at least 18 years old.");
+                valid = false;
+            }
+
+            // Validate Profession
+            const profession = document.getElementById("profession").value.trim();
+            if (profession === "") {
+                displayError("professionError", "Profession is required.");
+                valid = false;
+            }
+
+            // Validate State
+            const state = document.getElementById("state").value.trim();
+            if (state === "") {
+                displayError("stateError", "Please select your state.");
+                valid = false;
+            }
+
+            // If all validations passed, submit the form (this example just alerts)
+            if (valid) {
+                alert("Form successfully submitted!");
+                // Here you can submit the form to the server, e.g., using AJAX or form.submit().
+            }
+        });
+
+        // Helper function to display error message
+        function displayError(fieldId, message) {
+            const field = document.getElementById(fieldId);
+            field.textContent = message;
+        }
+
+        function clearErrors() {
+            const errors = document.querySelectorAll('.error');
+            errors.forEach(error => error.textContent = '');
+        }
+    </script>
+</body>
+</html>

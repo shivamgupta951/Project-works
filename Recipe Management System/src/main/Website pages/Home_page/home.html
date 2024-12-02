@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Manager</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>Recipe Manager</h1>
+</header>
+<nav>
+    <a href="#" id="account-info-btn"><i class="fa fa-user"></i> Account Info</a>
+    <a href="#" id="bookmarked-recipes-btn"><i class="fa fa-bookmark"></i> Bookmarked Recipes</a>
+    <a href="#" id="friends-btn"><i class="fa fa-users"></i> Friends</a>
+    <div class="search-bar">
+        <label for="name" class="name"><i class="fa fa-search"></i> Search Recipes</label>
+        <input type="text" id="name" placeholder="Recipe Name / ID">
+    </div>
+    <a href="#" id="feedback-btn"><i class="fa fa-comments"></i> Feedback</a>
+    <a href="#" id="settings-btn"><i class="fa fa-cog"></i> Settings</a>
+</nav>
+
+<section class="welcome">
+    <h2>Welcome to your Personalized Recipe Manager!</h2>
+    <p>Manage recipes, bookmark favorites, connect with friends, and discover new delights.</p>
+</section>
+
+<section class="trending">
+    <h2>Trending Recipes</h2>
+    <div class="recipes">
+        <div class="recipe-card">
+            <div class="image" style="background-image: url('img1.jpg');"></div>
+            <h3>Shahi Paneer</h3>
+            <p>Shahi Paneer is a Mughlai dish cooked in a creamy onion, yogurt, and nut-based gravy.</p>
+            <button class="view-btn">View Recipe</button>
+        </div>
+        <div class="recipe-card">
+            <div class="image" style="background-image: url('img3.jpg');"></div>
+            <h3>Chicken Biryani</h3>
+            <p>Chicken biryani is made with aromatic spices, rice, and tender chicken pieces.</p>
+            <button class="view-btn">View Recipe</button>
+        </div>
+        <div class="recipe-card">
+            <div class="image" style="background-image: url('img4.jpg');"></div>
+            <h3>Dal Makhani</h3>
+            <p>Dal Makhani features slow-cooked black lentils in a rich, buttery gravy.</p>
+            <button class="view-btn">View Recipe</button>
+        </div>
+        <div class="recipe-card">
+            <div class="image" style="background-image: url('img5.jpg');"></div>
+            <h3>Idli Sambhar</h3>
+            <p>Soft steamed idlis served with hearty sambar and coconut chutney.</p>
+            <button class="view-btn">View Recipe</button>
+        </div>
+    </div>
+    <div class="Background-1">
+        <button class="view-more-btn">
+            View More <i class="fa fa-arrow-right"></i>
+        </button>
+    </div>    
+</section>
+
+<section class="features">
+    <h2>Website Features</h2>
+    <div class="features-container">
+        <div class="feature">
+            <i class="fa fa-search"></i>
+            <h3>Search Recipes</h3>
+            <p>Find your favorite recipes easily with our advanced search feature.</p>
+        </div>
+        <div class="feature">
+            <i class="fa fa-bookmark"></i>
+            <h3>Bookmark Favorites</h3>
+            <p>Save your favorite recipes for quick access anytime.</p>
+        </div>
+        <div class="feature">
+            <i class="fa fa-users"></i>
+            <h3>Connect with Friends</h3>
+            <p>Share your recipes and see what your friends are cooking.</p>
+        </div>
+        <div class="feature">
+            <i class="fa fa-cog"></i>
+            <h3>Easy Settings</h3>
+            <p>Customize your experience with simple and intuitive settings.</p>
+        </div>
+    </div>
+</section>
+
+<section class="about-us">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>
+                Welcome to Recipe Manager! Our platform is dedicated to helping you explore, organize, 
+                and share the joy of cooking. Whether you're a seasoned chef or a beginner in the kitchen, 
+                our tools and resources are designed to enhance your culinary journey. Discover trending recipes, 
+                connect with friends, and create your own personalized recipe library.
+            </p>
+            <p>
+                Our mission is to make cooking fun, accessible, and stress-free for everyone. 
+                Join us today and experience the world of recipes like never before!
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="ORFF0J0.jpg" alt="About Us">
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>Recipe Manager</h3>
+            <p>Your ultimate companion for discovering, organizing, and sharing amazing recipes.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Trending Recipes</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Recipe Manager. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
