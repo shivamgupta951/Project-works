@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: url('ORFF0J0.jpg') no-repeat center center fixed;
+    background-size: cover; 
+  }
+  
+  .login-container {
+    width: 580px;
+    height: 580px;
+    background: rgb(205, 87, 18);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    border: 3px solid;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    padding: 3px;
+    text-decoration: underline;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .input-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .input-group input:focus {
+    border-color: #feb47b;
+  }
+  
+  .input-feedback {
+    font-size: 12px;
+    color: #ff7e5f;
+    margin-top: 5px;
+    display: none;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 14px;
+    background: #feb47b;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: rgb(18, 16, 16);
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #ff7e5f;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 15px;
+    font-size: 14px;
+    display: none;
+    animation: slideIn 0.5s ease-in-out;
+  }
+  
+  @keyframes slideIn {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+  }
+  
+  .toggle-password {
+    background: none;
+    border: none;
+    color: #feb47b;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .register-link {
+    margin-top: 20px;
+  }
+  
+  .register-btn {
+    color: #feb47b;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .register-btn:hover {
+    color: #ff7e5f;
+  }
+  .login-form
+  {
+    padding-top: 50px;
+  }
+  #password
+  {
+    width: 60%px;
+  }
+  
