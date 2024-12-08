@@ -8,7 +8,7 @@ Description - Personalized Recipe Manager is a system which allow us to create a
 
 Project Setup:
 
-This project is consist of basic structure of Recipe management system with the help of Java as Backend.Which is connected to a database (MySQL) with the help of JDBC, Which stands for Java Database Connection. With the help of JDBC we are able to manage the user data , recipe data and System data in a specific manner. Different packages are builded , which consist of different classes that will be used in program. All Setup is done and set for Review - 1..
+This project is consist of basic structure of Recipe management system with the help of Java as Backend.Which is connected to a database (MySQL) with the help of JDBC, Which stands for Java Database Connection. With the help of JDBC we are able to manage the user data , recipe data and System data in a specific manner. Different packages are builded , which consist of different classes that will be used in program.
 
 
 Requirements To Run Program: 
