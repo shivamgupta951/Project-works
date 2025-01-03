@@ -4,20 +4,25 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 public class User_info {
     /*Class is created to store the user info that are inputed by the user. */
-    public static String get_username(String email) throws Exception
-    {
-        int len = email.length();
-        int point=0;
-        for (int i = 0; i <len; i++) {
-            char value = email.charAt(i);
-            if (value=='@') {
-                point=i;
-                break;
+    public static String get_username(String email) throws Exception {
+        try {
+            int len = email.length();
+            int point = 0;
+    
+            for (int i = 0; i < len; i++) {
+                char value = email.charAt(i);
+                if (value == '@') {
+                    point = i;
+                    break;
+                }
             }
+    
+            return email.substring(0, point);
+        } catch (Exception e) {
+            System.out.println("Error while fetching username: " + e.getMessage());
+            throw e;
         }
-        String username = email.substring(0, point);
-        return username;
-    }
+    }    
     private static String url = "jdbc:mysql://127.0.0.1:3306/Recipe_manager_system";
     private static String username = "root";
     private static String password = "mysql@2004";    

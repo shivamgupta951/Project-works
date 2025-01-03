@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.Date;
 public class Account_generation {
     /*Automatic User Acc_id generator*/
-    private static String url = "jdbc:mysql://127.0.0.1:3306/Recipe_manager_system";
+    private static String url = "jdbc:mysql://127.0.0.1:3306/recipe_db";
     private static String username = "root";
     private static String password = "mysql@2004";    
     public static String create_accountidd(int phoneno) throws Exception{

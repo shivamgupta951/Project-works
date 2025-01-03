@@ -1,0 +1,166 @@
+# Recipe Manager System
+
+## Project Overview
+
+The Recipe Manager System is a Java-based dynamic web application designed to manage user accounts and recipes, categorized as normal and premium. Users can register, log in, and store recipes with their respective details. Premium recipes have additional privileges for users with premium accounts.
+
+---
+
+## Project Structure
+
+### **Packages and Classes**
+
+1. **Account\_registration**
+
+   - **AccountServlet**: Handles user registration and account-related operations.
+   - **User\_info**: DAO class to interact with the database for user details.
+
+2. **Normal\_recipies**
+
+   - **RecipeServlet**: Handles CRUD operations for normal recipes.
+   - **Normal\_recipes\_data**: DAO class to manage normal recipes in the database.
+
+3. **Premium\_Recipies**
+
+   - **PremiumRecipeServlet**: Handles CRUD operations for premium recipes.
+   - **Premium\_recipes\_data**: DAO class to manage premium recipes in the database.
+
+4. **Utilities**
+
+   - **Recipies\_id\_generator**: Service class to generate unique IDs for recipes.
+   - **Account\_generation**: Service class to generate unique account IDs for users.
+
+---
+
+## Features
+
+1. **User Management**
+
+   - User Registration
+   - Login and Authentication
+   - Fetch and Display User Details
+
+2. **Recipe Management**
+
+   - Add Normal Recipes
+   - Add Premium Recipes
+   - Fetch and Display Recipe Data
+
+3. **Premium Account Support**
+
+   - Premium users can add and view premium recipes.
+
+4. **Error Handling**
+
+   - Custom error pages for 404 and 500 errors.
+
+---
+
+## Key Technologies
+
+1. **Frontend**: JSP, HTML, CSS
+2. **Backend**: Java Servlets, JDBC
+3. **Database**: MySQL
+4. **Testing**: JUnit 5, Mockito
+
+---
+
+## Project Files
+
+### 1. **web.xml**
+
+Contains servlet definitions, mappings, and error handling configurations.
+
+### 2. **JSP Pages**
+
+- `registration.jsp`: User registration form.
+- `userInfo.jsp`: Displays user details.
+- `recipeList.jsp`: Displays recipes (normal and premium).
+- `success.jsp`: Confirms successful actions.
+- `error.jsp`: Displays error messages.
+
+---
+
+## Database Design
+
+### Tables
+
+1. **Users**
+
+   - `id`: Primary Key
+   - `username`
+   - `email`
+   - `phone`
+   - `state`
+   - `premium_status`
+
+2. **Normal\_Recipes**
+
+   - `recipe_id`: Primary Key
+   - `name`
+   - `ingredients`
+   - `process`
+
+3. **Premium\_Recipes**
+
+   - `recipe_id`: Primary Key
+   - `name`
+   - `ingredients`
+   - `process`
+
+4. **Recipe\_IDs**
+
+   - `id`: Primary Key
+   - `type`
+   - `generated_id`
+
+---
+
+## Unit Tests
+
+### DAO Tests
+
+1. **User\_info**
+
+   - Test fetching a username.
+   - Test user registration.
+
+2. **Normal\_recipes\_data**
+
+   - Test adding normal recipes.
+
+3. **Premium\_recipes\_data**
+
+   - Test adding premium recipes.
+
+### Service Tests
+
+1. **Recipies\_id\_generator**
+
+   - Test generating normal recipe IDs.
+   - Test generating premium recipe IDs.
+
+2. **Account\_generation**
+
+   - Test creating account IDs.
+
+---
+
+## Deployment Instructions
+
+1. Install a Java Servlet container (e.g., Apache Tomcat).
+2. Deploy the WAR file to the servlet container.
+3. Configure the database connection in the DAO classes.
+4. Access the application via the configured URL.
+
+---
+
+## Future Enhancements
+
+1. Implement search functionality for recipes.
+2. Add user roles and permissions.
+3. Integrate email notifications for user actions.
+4. Develop a mobile-friendly UI.
+
+---
+
